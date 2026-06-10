@@ -1,5 +1,7 @@
 # Corporate Credit Evaluation Model
 
+This project is for educational and portfolio purposes only. It is not financial advice, investment advice, or an official credit rating system.
+
 Python-based corporate credit scoring model that evaluates public companies using financial statement data, credit ratios, trend metrics, stress testing, SQLite storage, and optional AI-generated credit feedback.
 
 ## Overview
@@ -22,3 +24,24 @@ Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+Run the default model:
+python corporate_credit_model_full.py
+
+Run with AI memo generation:
+python corporate_credit_model_full.py --ai
+
+Run with custom tickers:
+python corporate_credit_model_full.py --tickers AAPL MSFT AMZN NVDA
+
+Known Limitations
+The model depends on public financial data availability and consistency.
+Internal ratings are model-generated and are not official agency ratings.
+Stress scenarios are simplified and should not be treated as full credit underwriting.
+AI feedback is optional and should be reviewed critically.
+
+Future Improvements
+Add sector-specific scoring weights.
+Add visual dashboards for score distribution and stress-test changes.
+Expand peer benchmarking by industry.
+Add sample output files with anonymized or limited data.
+Improve memo formatting for lender-style credit writeups.
