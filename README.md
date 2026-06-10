@@ -2,42 +2,44 @@
 
 ## Purpose
 
-I built this project to practice corporate credit analysis using Python. The model analyzes public-company financial data, calculates credit-relevant ratios, applies simple stress scenarios, and organizes the results for review.
+I built this project to practice corporate credit analysis with Python. The goal was to create a repeatable workflow for reviewing public-company financial data, calculating credit-related ratios, applying basic stress assumptions, and organizing the results.
 
-The main goal was to connect financial statement analysis with a repeatable coding workflow. I wanted to better understand how leverage, liquidity, profitability, and coverage ratios can be used together when evaluating corporate credit risk.
+I wanted this project to connect finance concepts with actual code. Instead of only calculating ratios manually, I wanted to build something that could process multiple companies in a consistent way and produce outputs that are easier to review.
 
-## What It Does
+## What This Project Does
 
-The model is designed to evaluate a group of public companies using a structured credit-analysis process.
+This model is designed to evaluate selected public companies through a basic corporate credit framework.
 
-Core features include:
+Main features include:
 
-- Pulling or processing public financial data
-- Calculating credit-relevant financial ratios
-- Comparing companies across a common framework
-- Applying basic stress-case assumptions
-- Producing structured output for review
-- Saving results in CSV and/or SQLite format
-- Optional AI-assisted credit summary generation
+* Pulling or processing public financial data
+* Calculating credit-related financial ratios
+* Reviewing leverage, liquidity, profitability, and coverage
+* Applying simple stress-case assumptions
+* Comparing companies across the same framework
+* Saving outputs in CSV and/or SQLite format
+* Producing an optional plain-English summary of results
+
+The project is not meant to replace professional credit judgment. It is a learning tool for practicing how credit analysis can be structured with code.
 
 ## Credit Metrics
 
 The model may evaluate companies using metrics such as:
 
-- Revenue
-- EBITDA or operating income
-- Net income
-- Total debt
-- Cash and equivalents
-- Debt-to-equity
-- Debt-to-assets
-- Interest coverage
-- Current ratio
-- Profit margin
-- Return on assets
-- Stress-case coverage estimates
+* Revenue
+* Operating income or EBITDA
+* Net income
+* Total debt
+* Cash and equivalents
+* Debt-to-equity
+* Debt-to-assets
+* Interest coverage
+* Current ratio
+* Profit margin
+* Return on assets
+* Stress-case coverage estimates
 
-These metrics are intended to provide a high-level view of credit quality, not a full professional credit rating.
+These ratios are meant to provide a high-level view of credit quality. They should be interpreted carefully because companies can differ significantly by industry, capital structure, and reporting style.
 
 ## Project Structure
 
@@ -46,8 +48,8 @@ corporate-credit-evaluation-model/
 │
 ├── corporate_credit_model.py
 ├── requirements.txt
-├── .gitignore
 ├── .env.example
+├── .gitignore
 ├── LICENSE
 └── README.md
 ```
@@ -61,7 +63,7 @@ git clone https://github.com/williamtbon/corporate-credit-evaluation-model.git
 cd corporate-credit-evaluation-model
 ```
 
-Install dependencies:
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -84,51 +86,48 @@ DATA_API_KEY=your_data_api_key_here
 OPENAI_API_KEY=your_optional_key_here
 ```
 
-Do not upload real API keys or credentials to GitHub.
+Do not upload real API keys, credentials, or private data to GitHub.
 
 ## Example Workflow
 
-A typical workflow is:
+A typical workflow for this project is:
 
-1. Select a group of companies to analyze.
-2. Pull or load financial data.
+1. Select a group of companies.
+2. Pull or load public financial data.
 3. Calculate credit ratios.
-4. Apply stress assumptions.
+4. Apply basic stress assumptions.
 5. Compare results across firms.
-6. Export the output for review.
-7. Optionally generate a plain-English credit summary.
+6. Export the results for review.
+7. Optionally generate a plain-English summary.
 
-## What I Learned
+## Notes From Building This
 
-While building this project, I learned that:
+This project helped me better understand that credit analysis is not based on one perfect number. A company can look strong on one metric and weaker on another, so leverage, liquidity, profitability, and coverage need to be reviewed together.
 
-- Credit analysis should not rely on one ratio alone.
-- Leverage, liquidity, profitability, and coverage need to be reviewed together.
-- Public financial data can be inconsistent, so cleaning and validation are important.
-- Stress testing helps show how quickly a company’s credit profile can weaken under pressure.
-- AI-generated summaries can be useful, but the underlying ratio logic needs to remain transparent and reviewable.
+One challenge was making the output useful without pretending the model is more advanced than it is. The project is intentionally simplified, but it gave me practice building a structured credit workflow and thinking about how financial data can be turned into a repeatable analysis process.
 
 ## Limitations
 
 This project has several limitations:
 
-- It is a simplified credit model and not a formal credit-rating system.
-- Public data may be delayed, incomplete, or inconsistent.
-- The model does not fully replace manual credit judgment.
-- Industry-specific differences may require more tailored ratio interpretation.
-- Stress assumptions are simplified and may not reflect real market conditions.
+* It is a simplified credit model, not a formal credit-rating system.
+* Public financial data may be incomplete, delayed, or inconsistent.
+* The model does not fully adjust for industry differences.
+* Stress assumptions are basic and may not reflect real market conditions.
+* The output should be reviewed manually before drawing conclusions.
+* AI-assisted summaries, if used, should be treated as explanations of the model output, not independent credit opinions.
 
 ## Future Improvements
 
-Possible future improvements include:
+Future improvements could include:
 
-- Adding industry-specific credit scoring logic
-- Improving data validation checks
-- Adding charts or dashboards
-- Expanding stress-testing scenarios
-- Adding a formal credit memo output
-- Separating the code into modules for data, ratios, scoring, and reporting
-- Adding unit tests for ratio calculations
+* Adding industry-specific ratio interpretation
+* Improving data validation
+* Expanding stress-testing scenarios
+* Adding charts or dashboards
+* Creating a more formal credit memo output
+* Separating the code into modules for data, ratios, scoring, and reporting
+* Adding unit tests for ratio calculations
 
 ## Disclaimer
 
